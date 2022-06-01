@@ -1,4 +1,5 @@
 import electron from 'electron'
+import remote from '@electron/remote'
 import path from 'path'
 import fs from 'fs'
 
@@ -20,7 +21,7 @@ export default class Store {
     data: any
 
     constructor(opts: StorageOptions) {
-        const dataPath = (electron.app || electron.remote.app).getPath('userData')
+        const dataPath = (electron.app || remote.app).getPath('userData')
         this.path = path.join(dataPath, opts.configName + '.json')
         this.data = parseDataFile(this.path, opts.defaults)
     }
