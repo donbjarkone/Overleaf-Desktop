@@ -24,6 +24,7 @@
     "electron-builder": "^22.8.1"
   },
   "dependencies": {
+    "@electron/remote": "^2.0.8",
     "@types/electron": "^1.6.10",
     "electron-context-menu": "^2.0.1",
     "electron-dl": "^3.0.1",
