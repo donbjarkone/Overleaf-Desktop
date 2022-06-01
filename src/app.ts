@@ -1,4 +1,5 @@
 import electron, { app, BrowserWindow, Menu } from 'electron'
+import remote from '@electron/remote'
 import contextMenu from 'electron-context-menu'
 import fs from 'fs'
 import path from 'path'
@@ -42,7 +43,7 @@ const initEvts = () => {
     })
 
     app.on('quit', () => {
-        const downloadDir = path.join((electron.app || electron.remote.app).getPath('userData'), '/download/')
+        const downloadDir = path.join((electron.app || remote.app).getPath('userData'), '/download/')
         const filepath = path.join(downloadDir, '/tmp.pdf')
 
         if (fs.existsSync(downloadDir)) {
