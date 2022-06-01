@@ -22,7 +22,6 @@ export default () => {
         show: process.platform != 'darwin',
         webPreferences: {
             nodeIntegration: false,
-            nativeWindowOpen: true,
             preload: path.join(__dirname, 'preload')
         }
     })
