@@ -32,7 +32,7 @@ export default () => {
     }
 
 
-    lookup('v2.overleaf.com').then((connected) => {
+    lookup('overleaf.com').then((connected) => {
         if (!connected) {
             const btnClicked = dialog.showMessageBoxSync(mw, {
                 title: "Detected No Internet Connection",
@@ -53,7 +53,7 @@ export default () => {
         }
     })
 
-    mw.loadURL('https://v2.overleaf.com/')
+    mw.loadURL('https://overleaf.com/')
 
 
     mw.webContents.on('dom-ready', () => {
