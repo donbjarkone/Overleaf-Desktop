@@ -1,5 +1,5 @@
 import electron, { BrowserWindow, screen } from 'electron'
-import remote from '@electron/remote'
+// import remote from '@electron/remote'
 import { download } from 'electron-dl'
 import fs from 'fs'
 import path from 'path'
@@ -24,7 +24,7 @@ export default async (url: string, mw: BrowserWindow, pdfView: BrowserWindow | n
         })
     }
 
-    const downloadDir = path.join((electron.app || remote.app).getPath('userData'), '/download/')
+    const downloadDir = path.join(electron.app.getPath('userData'), '/download/')
 
     if (!fs.existsSync(downloadDir)) {
         fs.mkdirSync(downloadDir)
