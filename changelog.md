@@ -3,7 +3,7 @@
 ## 3.1.0
 
 ### Fixed
-- Removed deprecated electron.remote; substituted for @electron/remote
+- Removed deprecated electron.remote
 - Updated URLs from "v2.overleaf.com" to "overleaf.com"
 
 ## 3.0.0
