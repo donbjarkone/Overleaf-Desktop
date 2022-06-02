@@ -1,6 +1,6 @@
 {
   "name": "overleaf",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A dedicated, **unofficial** desktop application for Overleaf, the online LaTeX editor. Written in electron and built in electron-builder.",
   "main": "./js/app.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^19.0.1",
-    "electron-builder": "^22.8.1"
+    "electron-builder": "^23.0.3"
   },
   "dependencies": {
     "@electron/remote": "^2.0.8",
